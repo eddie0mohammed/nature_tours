@@ -24,6 +24,17 @@
             cursor: pointer;
         }
 
+        @include respond(tab-port){
+            top: 4rem;
+            right: 4rem;
+
+        }
+        @include respond(phone){
+            top: 3rem;
+            right: 3rem;
+
+        }
+
     }
 
     &__background{
@@ -39,6 +50,18 @@
         transition: all 0.4s;
 
         // transform: scale(100);
+        @include respond(tab-port){
+            height: 4rem;
+            width: 4rem;
+            top: 5rem;
+            right: 5rem;
+
+        }
+        @include respond(phone){
+            top: 5rem;
+            right: 5rem;
+
+        }
     }
 
     &__nav{

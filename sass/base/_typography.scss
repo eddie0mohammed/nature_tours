@@ -6,7 +6,6 @@ body{
     line-height: 1.7;
     color: $color-grey-dark;
 
-    padding: 3rem;
  
 }
 
@@ -24,6 +23,11 @@ body{
         letter-spacing: 3.5rem;
     
         animation: moveInLeft 1s;
+
+        @include respond(phone){
+            letter-spacing: 1rem;
+            font-family: 5rem;
+        }
         
     }
 
@@ -51,6 +55,13 @@ body{
     color: transparent;
     letter-spacing: 2px;
     transition: all 0.2s;
+
+    @include respond(tab-port){
+        font-size: 3rem;
+    }
+    @include respond(phone){
+        font-size: 2.5rem;
+    }
 
     &:hover{
         transform: skewY(3deg) skewX(15deg) scale(1.1);
