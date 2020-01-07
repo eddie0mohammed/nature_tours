@@ -39,15 +39,33 @@
 
     &__left{
         width: 33.3333333%;
+        // height: 50%;
         display: table-cell;
+
+        @include respond(tab-land){
+            width: 0%;
+        }
+
+        @include respond(tab-port){
+            display: none;
+        }
  
     }
 
     &__right{
         width: 66.666666%;
+        // height: 50%;
         display: table-cell;
         vertical-align: middle;
         padding: 3rem 5rem;
+
+        @include respond(tab-land){
+            width: 100%;
+        }
+
+        @include respond(tab-port){
+            width: 100%;
+        }
 
 
     }
@@ -73,6 +91,10 @@
         -webkit-hyphens: auto;
         hyphens: auto;
 
+        @include respond(phone){
+            -moz-column-count: 1;
+            column-count: 1;
+        }
     }
 
     &:target{
